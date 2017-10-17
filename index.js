@@ -37,7 +37,7 @@ app.use('/auth', authRoutes);
 app.use('/profile', profileRoutes);
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', { user: req.user });
 });
 
 app.listen(3000, () => {
