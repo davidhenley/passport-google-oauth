@@ -4,6 +4,7 @@ const cookieSession = require('cookie-session');
 const passport = require('passport');
 
 const authRoutes = require('./routes/auth');
+const profileRoutes = require('./routes/profile');
 
 const passportSetup = require('./services/passport');
 
@@ -33,6 +34,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.use('/auth', authRoutes);
+app.use('/profile', profileRoutes);
 
 app.get('/', (req, res) => {
   res.render('index');
