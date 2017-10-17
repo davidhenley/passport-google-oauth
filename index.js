@@ -1,5 +1,6 @@
 const express = require('express');
 const authRoutes = require('./routes/auth');
+const passportSetup = require('./services/passport');
 
 const app = express();
 
